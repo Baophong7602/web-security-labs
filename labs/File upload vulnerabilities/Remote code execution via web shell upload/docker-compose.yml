@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    container_name: file-upload-rce-lab
+    ports:
+      - "3000:80"
+    volumes:
+      - ./app:/var/www/html
