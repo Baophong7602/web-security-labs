@@ -13,9 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     /*
-    ============================================================
     CODE LỖI - VULNERABLE
-    ============================================================
     */
 
     // Lấy tên file do người dùng cung cấp
@@ -51,16 +49,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
     /*
-    ============================================================
     CODE FIX
-    ============================================================
 
-    Khi trình bày bản fix:
-    - Comment toàn bộ CODE LỖI ở phía trên.
-    - Bỏ comment CODE FIX ở phía dưới.
     */
 
-    /*
+    
     // FIX 1: Kiểm tra lỗi upload
     if ($_FILES['avatar']['error'] !== UPLOAD_ERR_OK) {
         die("Upload failed.");
@@ -125,7 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "Upload failed.";
 
     }
-    */
+    
 
 }
 ?>
