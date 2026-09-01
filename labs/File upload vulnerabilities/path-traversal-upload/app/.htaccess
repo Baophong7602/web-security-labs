@@ -1,0 +1,3 @@
+RewriteEngine On
+
+RewriteRule ^my-account/avatar$ upload-avatar.php [L]

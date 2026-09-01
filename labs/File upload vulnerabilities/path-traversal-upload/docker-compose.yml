@@ -1,0 +1,11 @@
+services:
+  web:
+    build: .
+
+    container_name: path-traversal-upload-lab
+
+    ports:
+      - "3000:80"
+
+    volumes:
+      - ./app:/var/www/html
