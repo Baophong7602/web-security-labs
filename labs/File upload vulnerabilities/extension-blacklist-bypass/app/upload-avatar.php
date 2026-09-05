@@ -25,9 +25,12 @@ $extension = strtolower(
 if ($extension === "php") {
     die("Invalid file type.");
 }
-// if (!in_array($extension, ["jpg", "jpeg", "png"])) {
-//     die("Invalid file type.");
-// }
+    // if (!in_array($extension, ["jpg", "jpeg", "png"])) {
+    //     die("Invalid file type.");
+    // }
+if (strpos($filename, "..") !== false) {
+    die("Invalid file name.");
+}
 if (move_uploaded_file($file["tmp_name"], $target)) {
 
     $_SESSION["avatar"] = $filename;
