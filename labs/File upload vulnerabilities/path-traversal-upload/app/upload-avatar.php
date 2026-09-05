@@ -29,11 +29,10 @@ $uploadDir = __DIR__ . "/files/avatars/";
 $target = $uploadDir . $filename;
 
 
-// Bỏ comment phần này để chặn Path Traversal.
-
-if (strpos($filename, "..") !== false) {
-    die("Invalid file name.");
-}
+ 
+// if (strpos($filename, "..") !== false) {
+//     die("Invalid file name.");
+// }
 
 
 if (move_uploaded_file($file["tmp_name"], $target)) { 
