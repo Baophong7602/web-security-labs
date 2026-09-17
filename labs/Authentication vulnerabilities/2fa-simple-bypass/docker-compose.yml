@@ -1,0 +1,6 @@
+services:
+  2fa-simple-bypass:
+    build: .
+    container_name: 2fa-simple-bypass
+    ports:
+      - "3000:80"
