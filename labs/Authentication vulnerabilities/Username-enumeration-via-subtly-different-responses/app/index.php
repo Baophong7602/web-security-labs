@@ -16,7 +16,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     Lỗi:
     - Username không tồn tại và username tồn tại nhưng sai password
       trả về response khác nhau.
-    - Attacker có thể dựa vào message/response length để biết username hợp lệ.
     */
 
 
@@ -41,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 
     /*
-    FIXED CODE 
+    FIXE 
    
     */
 
