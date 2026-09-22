@@ -30,9 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         
         //   LỖ HỔNG:
         //   Token không được liên kết với username.
-         
-        //   Code vulnerable:
-         
+                  
          $_SESSION["reset_tokens"][$token] = true;
          
 
