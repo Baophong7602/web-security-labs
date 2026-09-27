@@ -1,0 +1,8 @@
+services:
+  broken-bruteforce-lab:
+    build: .
+    container_name: broken-bruteforce-lab
+    ports:
+      - "3000:80"
+    volumes:
+      - ./app:/var/www/html
