@@ -4,7 +4,7 @@ session_start();
 
 $users = [
     "wiener" => "peter",
-    "carlos" => "secret123"
+    "carlos" => "access"
 ];
 
 // Bộ đếm chung
@@ -49,10 +49,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $_SESSION["logged_in"] = true;
         $_SESSION["username"] = $username;
 
-        $logged_in = true;
-        $current_user = $username;
-
-        $message = "Login successful";
+          header("Location: /");
+         exit;
     }
 
     /*
