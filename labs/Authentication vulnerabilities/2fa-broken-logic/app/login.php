@@ -3,8 +3,7 @@
 session_start();
 
 $users = [
-    "wiener" => "peter",
-    "carlos" => "carlos123"
+    "wiener" => "peter"
 ];
 
 $message = "";
@@ -24,11 +23,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             "Location: /login2.php?verify=" .
             urlencode($username)
         );
-
         exit;
     }
 
-    $message = "Invalid user";
+    $message = "Invalid username or password";
 }
 
 ?>
@@ -47,14 +45,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     <label>Username</label>
     <br>
-
     <input type="text" name="username">
 
     <br><br>
 
     <label>Password</label>
     <br>
-
     <input type="password" name="password">
 
     <br><br>
@@ -65,9 +61,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 </form>
 
-<p>
-    <?= htmlspecialchars($message) ?>
-</p>
+<p><?= htmlspecialchars($message) ?></p>
 
 </body>
 </html>
+

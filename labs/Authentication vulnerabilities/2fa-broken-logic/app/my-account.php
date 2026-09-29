@@ -2,22 +2,15 @@
 
 session_start();
 
-
-/*
- * Phải hoàn thành 2FA mới được vào.
- */
 if (
     !isset($_SESSION["2fa_verified"]) ||
     $_SESSION["2fa_verified"] !== true
 ) {
-
-    header("Location: /login");
-
+    header("Location: /login.php");
     exit;
 }
 
-
-$username = $_SESSION["authenticated_user"];
+$username = $_SESSION["authenticated_user"] ?? "";
 
 ?>
 
@@ -37,7 +30,6 @@ $username = $_SESSION["authenticated_user"];
     <b><?= htmlspecialchars($username) ?></b>
 </p>
 
-
 <?php if ($username === "carlos"): ?>
 
     <p>
@@ -56,13 +48,12 @@ $username = $_SESSION["authenticated_user"];
 
 <?php endif; ?>
 
-
 <br>
 
-<a href="/logout">
+<a href="/logout.php">
     Logout
 </a>
 
 </body>
-
 </html>
+
