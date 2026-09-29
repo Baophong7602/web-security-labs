@@ -1,0 +1,6 @@
+RewriteEngine On
+
+RewriteRule ^login$ login.php [L]
+RewriteRule ^login2$ login2.php [L]
+RewriteRule ^logout$ logout.php [L]
+RewriteRule ^my-account$ my-account.php [L]

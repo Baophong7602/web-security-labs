@@ -1,0 +1,6 @@
+services:
+  2fa-broken-logic:
+    build: .
+    container_name: 2fa-broken-logic-lab
+    ports:
+      - "3000:80"
