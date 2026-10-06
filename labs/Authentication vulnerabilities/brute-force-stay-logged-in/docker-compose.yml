@@ -1,0 +1,8 @@
+services:
+  brute-force-stay-logged-in:
+    build: .
+    container_name: brute-force-stay-logged-in-lab
+    ports:
+      - "3000:80"
+    volumes:
+      - ./app:/var/www/html
