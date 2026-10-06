@@ -1,0 +1,6 @@
+services:
+  offline-password-cracking:
+    build: .
+    container_name: offline-password-cracking-lab
+    ports:
+      - "3000:80"
