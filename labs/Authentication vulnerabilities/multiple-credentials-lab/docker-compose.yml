@@ -1,0 +1,9 @@
+services:
+  multiple-credentials-lab:
+    build: .
+    container_name: multiple-credentials-lab
+    ports:
+      - "3000:80"
+    volumes:
+      - ./app:/var/www/html
+    restart: unless-stopped
