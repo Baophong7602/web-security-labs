@@ -2,13 +2,12 @@
 <?php
 require_once __DIR__ . '/db.php';
 
-// Xử lý logic
 $category = $_GET['category'] ?? null;
 $products = [];
 
 if ($category !== null) {
-    // Cố ý tạo lỗ hổng SQL Injection để thực hành
-    // $sql = "SELECT * FROM products
+// Bảng lỗi
+// $sql = "SELECT * FROM products
     //         WHERE category = '$category'
     //         AND released = 1";
 
